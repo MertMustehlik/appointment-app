@@ -1,0 +1,13 @@
+{
+    "successfully_logged_out": "Successfully logged out",
+    "added_successfully": "Added successfully",
+    "created_successfully": "Created successfully",
+    "updated_successfully": "Updated successfully",
+    "deleted_successfully": "Deleted successfully",
+    "user": "User",
+    "users": "Users",
+    "admin": "Admin",
+    "admins": "Admins",
+    "available_appointment": "Available Appointment",
+    "available_appointmentS": "Available Appointments"
+}
