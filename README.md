@@ -1,6 +1,6 @@
 ## Routes
 
-### Authenticate
+### Authenticate (tymon/jwt-auth)
 
 ##### User
 
