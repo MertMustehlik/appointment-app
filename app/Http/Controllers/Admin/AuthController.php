@@ -21,6 +21,7 @@ class AuthController extends Controller
         }
 
         return response()->json([
+            "message" => __("login_success"),
             "admin" => new AdminResource(Auth::guard("admin")->user()),
             "token" => $token
         ]);
@@ -29,7 +30,7 @@ class AuthController extends Controller
     public function me()
     {
         return response()->json([
-            "admin" => new AdminResource(Auth::guard("admin")->user()),
+            "admin" => new AdminResource(Auth::guard("admin")->user())
         ]);
     }
 
@@ -37,7 +38,7 @@ class AuthController extends Controller
     {
         Auth::guard("admin")->logout();
         return response()->json([
-            "message" => __("successfully_logged_out"),
+            "message" => __("logout_success"),
         ]);
     }
 

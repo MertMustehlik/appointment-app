@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Admin\AvailableAppointment\StoreRequest;
 use App\Http\Resources\AvailableAppointmentResource;
 use App\Models\AvailableAppointment;
+use Illuminate\Support\Facades\Auth;
 
 class AvailableAppointmentController extends Controller
 {

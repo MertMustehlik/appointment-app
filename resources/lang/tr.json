@@ -1,0 +1,16 @@
+{
+    "login_success": "Başarıyla giriş yapıldı",
+    "logout_success": "Başarıyla çıkış yapıldı",
+    "please_sign_in": "Lütfen giriş yapınız",
+    "you_do_not_have_the_required_authorization": "Gerekli yetkiye sahip değilsiniz",
+    "added_successfully": "Başarıyla eklendi",
+    "created_successfully": "Başarıyla oluşturuldu",
+    "updated_successfully": "Başarıyla güncellendi",
+    "deleted_successfully": "Başarıyla silindi",
+    "user": "Kullanıcı",
+    "users": "Kullanıcılar",
+    "admin": "Yönetici",
+    "admins": "Yöneticiler",
+    "available_appointment": "Müsait Randevu",
+    "available_appointments": "Müsait Randevular"
+}

@@ -2,11 +2,13 @@
 
 namespace App\Exceptions;
 
+use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
 use Throwable;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
+use Illuminate\Validation\ValidationException;
 
 class Handler extends ExceptionHandler
 {
@@ -45,16 +47,16 @@ class Handler extends ExceptionHandler
             return true;
         });
 
-        $this->renderable(function (\Illuminate\Validation\ValidationException $e) {
+        $this->renderable(function (ValidationException $e) {
             return response()->json([
                 'errors' => $e->errors(),
             ], 422);
         });
 
-        $this->renderable(function (\Illuminate\Validation\ValidationException $e) {
+        $this->renderable(function (\Spatie\Permission\Exceptions\UnauthorizedException $e) {
             return response()->json([
-                'errors' => $e->errors(),
-            ], 422);
+                'message' => __("you_do_not_have_the_required_authorization")
+            ], 403);
         });
     }
 }

@@ -11,8 +11,7 @@ class Authenticate extends Middleware
     {
         if ((!in_array("api", $guards) && !in_array("admin", $guards)) || (in_array("api", $guards) && !auth()->check()) || (in_array("admin", $guards) && !auth()->guard("admin")->check())){
             return response()->json([
-                'message' => 'Unauthorized',
-                'guards' => $guards
+                'message' => __("please_sign_in")
             ],401);
         }
 

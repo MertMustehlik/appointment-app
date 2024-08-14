@@ -14,6 +14,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
+
         User::create([
             'first_name' => 'Test',
             'last_name' => 'User',
@@ -22,10 +23,15 @@ class DatabaseSeeder extends Seeder
         ]);
 
         Admin::create([
+            'email' => 'admin@admin.com',
+            'password' => 123123,
+        ]);
+        Admin::create([
             'email' => 'mertmustehlik@hotmail.com',
             'password' => 123123,
         ]);
 
+        $this->call(AdminRoleSeeder::class);
         $this->call(AvailableAppointmentSeeder::class);
     }
 }

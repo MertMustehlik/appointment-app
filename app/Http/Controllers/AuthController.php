@@ -19,6 +19,7 @@ class AuthController extends Controller
         }
 
         return response()->json([
+            "message" => __("login_success"),
             "user" => new UserResource(Auth::user()),
             "token" => $token
         ]);
@@ -35,7 +36,7 @@ class AuthController extends Controller
     {
         Auth::logout();
         return response()->json([
-            "message" => __("successfully_logged_out"),
+            "message" => __("logout_success"),
         ]);
     }
 

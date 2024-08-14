@@ -1,5 +1,8 @@
 {
-    "successfully_logged_out": "Successfully logged out",
+    "login_success": "Login successful",
+    "logout_success": "Successfully logged out",
+    "please_sign_in": "Please sign in",
+    "you_do_not_have_the_required_authorization": "You do not have the required authorization",
     "added_successfully": "Added successfully",
     "created_successfully": "Created successfully",
     "updated_successfully": "Updated successfully",
